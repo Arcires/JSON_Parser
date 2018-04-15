@@ -39,13 +39,14 @@ public class Parser {
             String locFloor = (String) entryLocations.getValue().get("floor");
             String locLandmark = (String) entryLocations.getValue().get("landmark");
 
+            /* Experimental portion. Needs further work to correctly import positions.
+
             JSONObject objPositions= (JSONObject) ((JSONObject) new JSONParser().parse(new FileReader("src/JSON2SQL/dist_locations.json"))).get("position");
 
             HashMap<String, HashMap> positions = new HashMap<>();
             positions.putAll(objPositions);
 
 
-            /* Experimental portion. Needs further work to correctly import positions.
 
             for (Map.Entry<String, HashMap> entryPositions : locations.entrySet()) {
                 String locPosLatitude = (String) entryPositions.getValue().get("latitude");
